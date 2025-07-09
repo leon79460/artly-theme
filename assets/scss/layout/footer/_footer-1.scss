@@ -1,0 +1,196 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 Footer Style 1
+/*----------------------------------------*/
+.footer-logo{
+    & img{
+        width: 168px;
+    }
+}
+
+.footer-sep{
+    background: #fff;
+    opacity: 0.15;
+    height: 1px;
+}
+.tpfooter-social {
+    & a {
+        color: #fff;
+        opacity: .7;
+        margin-right: 18px;
+    }
+    @media #{$xs}{
+        padding-left: 0;
+    }
+}
+
+.tp-footer-widget{
+    & ul{
+        list-style: none;
+        & li{
+            margin-bottom: 5px;
+            & a{
+                font-size: 17px;
+                color: #b1b4ba;
+                &:hover{
+                    color: var(--tp-theme-color-2);
+                }
+            }
+        }
+    }
+}
+.tp-footer-widget-title{
+    font-size: 20px;
+    color: #fff;
+}
+.footer-content{
+    & span{
+        font-size: 17px;
+        color: #b1b4ba;
+    }
+}
+.tp-footer-contact{
+    &-item{
+        & span{
+            font-size: 17px;
+            color: #b1b4ba;
+        }
+        & h4{
+            font-size: 30px;
+            color: #fff;
+            @media #{$xl}{
+                font-size: 26px;
+            }
+            @media #{$md}{
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+.tp-footer-col{
+    &-3{
+        padding-left: 60px;
+        position: relative;
+        @media #{$md,$xs}{
+            padding-left: 0;
+        }
+    }
+    &-4{
+        padding-left: 35px;
+        &:before{
+            left: -65px;
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+        @media #{$md,$xs}{
+            padding-left: 0;
+        }
+    }
+    &-3{
+        position: relative;
+        &:before, &:after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 1px;
+            background-color: #fff;
+            opacity: .15;
+            left: -40px;
+            top: 0px;
+            @media #{$md,$xs}{
+                display: none;
+            }
+        }
+        &:after{
+           left: auto;
+           right: 30px; 
+        }
+        @media #{$md,$xs}{
+            padding-left: 0;
+        }
+    }
+}
+
+
+.tp-footer-copyright{
+    & p{
+        font-size: 17px;
+        color: #b1b4ba;
+        margin: 0;
+        & a{
+            font-weight: 500;
+            color: var(--tp-theme-color-2);
+        }
+    }
+}
+.tp-footer-widget-area{
+    border-bottom: 1px solid rgb(255, 255, 255, .15);
+    position: relative;
+    z-index: 1;
+}
+.tp-footer-menu{
+    & ul{
+        & li{
+            display: inline-block;
+            padding-left: 33px;
+            margin-left: 33px;
+            position: relative;
+            @media #{$xs}{
+                padding-left: 10px;
+                margin-left: 10px;
+            }
+            @media #{$xl}{
+                padding-left: 15px;
+                margin-left: 15px;
+            }
+            &:first-child{
+                padding-left: 0;
+                margin-left: 0;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                height: 13px;
+                width: 1px;
+                background-color: #b1b4ba;
+                left: 0;
+                top: 8px;
+            }
+            &:first-child{
+                &:before{
+                    display: none;
+                }
+            }
+            & a{
+                font-weight: 500;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: #b1b4ba;
+                &:hover{
+                    color: var(--tp-theme-color-2);
+                }
+            }
+        }
+    }
+}
+.tp-footer-shape{
+    &-01 {
+        left: 17%;
+        top: 41%;
+    }
+    &-02 {
+        left: 46.5%;
+        top: 15%;
+    }
+    &-03 {
+        right: 12%;
+        bottom: 10%;
+    }
+    &-04 {
+        right: 6%;
+        top: 10%;
+    }
+}

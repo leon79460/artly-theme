@@ -1,0 +1,128 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.2 Recent Post
+/*----------------------------------------*/
+
+.tpblog{
+    &__thumb{
+        & img{
+            width: 100%;
+        }
+    }
+    &__content{
+        @media #{$lg,$md}{
+            padding-left: 0px;
+        }
+        &-meta {
+            width: 55px;
+            height: 170px;
+            background: #FFE4FB;
+            justify-content: center;
+            padding: 8px 0;
+            position: relative;
+            @include flexbox();
+            align-items: end;
+            text-align: center;
+            flex: 0 0 auto;
+            border-radius: 10px;
+            & span {
+                @include flexbox();
+                flex-direction: column-reverse;
+                & cite {
+                    position: absolute;
+                    width: 130px;
+                    @include transform(rotate(-90deg));
+                    left: -37px;
+                    bottom: 97px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                }
+            }
+            & i {
+                height: 45px;
+                width: 45px;
+                background: #fff;
+                border-radius: 5px;
+                line-height: 42px;
+                text-align: center;
+                margin: auto;
+                border: 1px solid #57595C;
+                border-radius: 10px;
+              }
+          }
+
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 1.25;
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+        @media #{$lg}{
+           font-size: 27px;
+        }
+        @media #{$md}{
+           font-size: 27px;
+        }
+    }
+    &__meta{
+        @include flexbox();
+        align-items: center;
+        flex-wrap: wrap;
+        & span{
+            font-size: 17px;
+            color: #57595c;
+            & i{
+                margin-right: 5px;
+            }
+        }
+        & cite{
+            width: 2px;
+            height: 16px;
+            background: #57595C;
+            display: inline-block;
+            margin: 0 14px;
+        }
+    }
+    &-2{
+        @media #{$xs}{
+            padding: 5px;
+        }
+        border: 1px solid #000;
+        position: relative;
+        .tpblog__thumb {
+            width: 200px;
+            flex: 0 0 auto;
+            @include transform(translateY(-12px));
+            margin-left: -3px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @media #{$xs}{
+                position: static;
+                width: 100%;
+                margin: auto;
+                height: auto;
+                @include transform(translateY(0px));
+            }
+            & img{
+                height: calc(100% + 24px);
+                object-fit: cover;
+            }
+        }
+        & .tpblog__content {
+            padding-left: 228px;
+            padding-top: 23px;
+            padding-bottom: 23px;
+            padding-right: 20px;
+            @media #{$xs}{
+                padding: 25px 25px;
+            }
+        }
+        
+    }
+}

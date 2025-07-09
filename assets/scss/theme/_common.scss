@@ -1,0 +1,190 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
+
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+img{
+	max-width: 100%;
+}
+
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	z-index: 1;
+}
+.z-index-2{
+	z-index: 2;
+}
+.z-index-3{
+	z-index: 3;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+.bg-pos-end{
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.overflow-x-visible{
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+.br-5{
+	border-radius: 5px;
+}
+.br-24{
+	border-radius: 24px;
+}
+.br{
+	&-5{
+		& > img{
+			border-radius: 5px;
+		}
+	}
+	&-10{
+		& > img{
+			border-radius: 10px;
+		}
+	}
+	&-15{
+		& > img{
+			border-radius: 15px;
+		}
+	}
+	&-20{
+		border-radius: 20px;
+		& > img, & > a img {
+			border-radius: 20px;
+		}
+	}
+	&-140{
+		border-radius: 140px;
+		@media #{$md,$xs}{
+			border-radius: 0;
+		}
+	}
+	&-150{
+		border-radius: 150px;
+		@media #{$md,$xs}{
+			border-radius: 0;
+		}
+	}
+}
+.tp-fs{
+	&-15{
+		font-size: 15px;
+	}
+	&-20{
+		font-size: 20px;
+	}
+	&-24{
+		font-size: 24px;
+	}
+	&-30{
+		font-size: 30px;
+		@media #{$xs}{
+            font-size: 22px;
+        }
+	}
+	&-40{
+		font-size: 40px;
+        @media #{$lg}{
+            font-size: 32px;
+        }
+	}
+}
+.tp{
+	&-medium{
+		font-weight: 500;
+	}
+}
+.tp-upper{
+	text-transform: uppercase;
+}
+.tp-cap{
+	text-transform: capitalize;
+}
+
+.tp-text-white{
+	color: #fff;
+}
+.tp-white-bg{
+	background-color: #fff;
+}
+.tp-black-bg{
+	background-color: var(--tp-common-black);
+}
+.tp-blue-bg{
+	background-color: var(--tp-theme-color);
+}
+.tp-yellow-bg{
+	background-color: var(--tp-theme-color-2);
+}
+.tp-nblue-bg{
+	background-color: var(--tp-theme-nblue);
+}
+.tp-cream-bg{
+	background-color: var(--tp-cream);
+}
+.tp-cream-bg-2{
+	background-color: var(--tp-cream-2);
+}
+.tp-theme-black-bg{
+	background-color: var(--tp-heading-color);
+}
+
+.tp-color-orange{
+	color: var(--tp-theme-orange);
+}
+
+.tp-slide-transtion {
+	-webkit-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+.tp-brand-slide-element {
+	width: auto;
+	display: inline-block;
+}
+.solid-bg {
+	&.jarallax{
+		height: 800px;
+		@media #{$lg}{
+			height: 600px;
+		}
+		@media #{$md}{
+			height: 400px;
+		}
+		@media #{$xs}{
+			height: 300px;
+		}
+	}
+}

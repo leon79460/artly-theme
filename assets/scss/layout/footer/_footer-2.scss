@@ -1,0 +1,144 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.2 Footer Style 2
+/*----------------------------------------*/
+
+.tp-footer-widget-title-white{
+    color: #0A0E1A;
+}
+.tp-footer-newsletter{
+    position: relative;
+    & button{
+        position: absolute;
+        right: 0;
+        bottom: 13px;
+        color: #57595C;
+    }
+}
+.tp-footer-social{
+    & a{
+        font-size: 20px;
+        margin-right: 10px;
+        color: #57595C;
+    }
+    &-2 a {
+        margin-right: 15px;
+        color: #B1B4BA;
+		&:hover{
+            color: var(--tp-theme-color-2);
+        }
+    }
+}
+.tp-footer-newsletter{
+    & input{
+        margin-bottom: 10px;
+    }
+    .form-check-label {
+        font-size: 15px;
+        color: #57595C;
+        line-height: 1;
+    }
+    .form-check .form-check-input {
+        @include transform(translateY(2px));
+    }
+    &-2 {
+
+        & .form-check-label {
+            color: #B1B4BA;
+        }
+        & .form-check input{
+            border: 1px solid #545454;
+            --bs-form-check-bg: none;
+        }
+        & input{
+            color: #fff;
+            @include tp-placeholder(){
+                color: #B1B4BA;
+            }
+        }
+    }
+}
+.tp-footer-widget-2{
+    & ul{
+        & li{
+            & a{
+                color: #57595C;
+                &:hover{
+                    color: var(--tp-theme-color);
+                }
+            }
+        }
+    }
+    & .tp-footer-contact-item {
+        & span {
+            color: #57595C;
+        }
+        & h4 {
+            color: #0A0E1A;
+        }
+    }
+    & .footer-content span {
+        font-size: 17px;
+        color: #57595C;
+    }
+}
+
+.tp-footer-2-col-2{
+    padding-left: 80px;
+    @media #{$lg,$md,$xs}{
+        padding-left: 0px;
+    }
+}
+.tp-footer-2-col-3{
+    padding-left: 40px;
+    @media #{$lg,$md,$xs}{
+        padding-left: 0px;
+    }
+}
+.tp-footer-2-col-4{
+    padding-left: 70px;
+    @media #{$lg,$md,$xs}{
+        padding-left: 0px;
+    }
+}
+
+.tp-footer-5-col-2{
+    padding-left: 40px;
+    @media #{$lg,$md,$xs}{
+        padding-left: 0;
+    } 
+}
+
+.tp-footer-4-col{
+    &-2{
+        padding-left: 50px;
+        @media #{$lg,$md,$xs}{
+            padding-left: 0px;
+        }
+    }
+    &-3{
+        padding-left: 50px;
+        @media #{$lg,$md,$xs}{
+            padding-left: 0px;
+        }
+    }
+}
+.tp-footer-copyright-area-2{
+    .tp-footer-copyright p {
+        color: #57595C;
+        & a {
+            font-weight: 500;
+            color: var( --tp-theme-orange);
+        }
+    }
+    .tp-footer-menu ul li a {
+        color: #57595C;
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+    }
+}
+.tp-footer-widget-area-border{
+    border-bottom: 1px solid #57595C;
+}

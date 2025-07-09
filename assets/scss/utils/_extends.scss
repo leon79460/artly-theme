@@ -1,0 +1,10 @@
+@use './mixins' as *;
+
+// bg thumbnails
+%bg-thumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

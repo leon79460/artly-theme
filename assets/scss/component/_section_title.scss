@@ -1,0 +1,106 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Section Title
+/*----------------------------------------*/
+
+.tp-section{
+	&-subtitle{
+		font-weight: 500;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #57595c;
+		display: block;
+		&-white{
+			color: #A3AEC3;
+		}
+		& i{
+			height: 10px;
+			width: 10px;
+			border-radius: 30px;
+			background: var(--tp-theme-color);
+			display: inline-block;
+			&.sub-dot-color{
+				background: var(--tp-theme-orange);
+			}
+
+		}
+	}
+	&-title {
+		font-size: 60px;
+		&.tp-fs-40{
+			font-size: 40px;
+		}
+		@media #{$lg}{
+			font-size: 54px;
+		}
+		@media #{$md}{
+			font-size: 38px;
+		}
+		@media #{$xs}{
+			font-size: 40px;
+		}
+		& br{
+			@media #{$xs}{
+				display: none;
+			}
+		}
+		&-br{
+			& br{
+				@media #{$xl,$lg,$md,$xs}{
+					display: none;
+				}
+			}
+		}
+		&-white{
+			color: #fff;
+		}
+		&-wrapper{
+			& p{
+				& br{
+					@media #{$xs}{
+						display: none;
+					}
+				}
+			}
+		}
+		&-40{
+			font-size: 40px;
+			@media #{$xs}{
+				font-size: 22px;
+			}
+		}	
+	}
+	&-title-content-white{
+		color: #A3AEC3;
+		& b{
+			color:#fff;
+		}
+	}
+}
+
+.xl-fns-45{
+    @media #{$xl}{
+        font-size: 45px;
+    }
+}
+.tp-services-details-list-item {
+	background: #FBF6EF;
+	padding: 30px;
+	& span {
+		font-size: 24px;
+		color: #fff;
+		background: #0057FC;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		border-radius: 50%;
+		flex: 0 0 auto;
+	}
+}
+.tp-services-details-list-title{
+	@media #{$lg}{
+        font-size: 20px;
+    }
+}

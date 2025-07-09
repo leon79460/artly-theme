@@ -1,0 +1,272 @@
+@use '../utils' as *;
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Exdos - Creative Agency HTML Template
+    Author: Theme_Pure
+    Support: help.themepure.net
+    Description: Exdos - Creative Agency HTML Template is a modern, customizable, and responsive template designed for agencies to showcase their work, services, and team with stylish layouts and interactive features.
+    Version: 1.0.0
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 Theme Default
+		1.2 Common Classes
+		1.3 Default Spacing
+		
+	-----------------
+    02. COMPONENTS css
+	-----------------
+		2.1 Accordion
+		2.2 Back to Top
+		2.3 Breadcrumb
+		2.4 Button
+		2.5 Custom Animation
+		2.6 Offcanvas
+		2.7 Preloader
+		2.8 Search Bar
+		2.9 Skill
+
+	-----------------
+    03. HEADER CSS
+	-----------------
+		3.1 Header Style 1
+		3.2 Mobile Menu
+
+	---------------------------------
+	04. BLOG CSS
+	---------------------------------
+		4.1 Postbox
+		4.2 Recent Post
+		4.3 Sidebar
+
+	---------------------------------
+	06. FOOTER CSS
+	---------------------------------
+		5.1 Footer Style 1
+		5.2 Footer Style 2
+		5.3 Footer Style 3
+	
+	---------------------------------
+	07. PAGES CSS
+	---------------------------------
+		6.1 About
+		6.2 Award
+		6.3 Brand
+		6.4 Contact
+		6.5 CTA
+		6.6 Fact
+		6.7 Faq
+		6.8 Hero
+		6.9 Newsletter
+		6.10 Portfolio
+		6.11 Pricing
+		6.12 Process
+		6.13 Servicess
+		6.14 Team
+		6.15 Testimonial
+		6.16 Video
+
+
+**********************************************/
+
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+@import url($font-url);
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*---------------------------------
+	typography css start 
+---------------------------------*/
+body {
+	font-family: var(--tp-font-body);
+	font-size: 17px;
+	font-weight: normal;
+	color: var(--tp-body-color);
+	line-height: 28px;
+}
+
+a{
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--tp-font-heading);
+	color: var(--tp-heading-color);
+	margin-top: 0px;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 48px;
+}
+  
+h2 {
+font-size: 38px;
+}
+
+h3 {
+font-size: 28px;
+}
+
+h4 {
+font-size: 24px;
+}
+
+h5 {
+font-size: 18px;
+}
+
+h6 {
+font-size: 16px;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+p {
+	font-family: var(--tp-font-body);
+	font-size: 17px;
+	font-weight: 400;
+	color: var(--tp-body-color);
+	margin-bottom: 15px;
+	line-height: 28px;
+}
+
+
+a,
+button,
+p,
+input,
+select,
+textarea,
+li,
+.transition-3{
+	@include transition(.3s);
+}
+
+a:not([href]):not([class]), 
+a:not([href]):not([class]):hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover{
+	color: inherit;
+	text-decoration: none;
+}
+
+
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:focus{
+    outline: 0; 
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="url"],
+textarea{
+	outline: none;
+	background-color: transparent;
+	height: 56px;
+	width: 100%;
+	line-height: 56px;
+	font-size: 15px;
+	color: var(--tp-common-black);
+	border: 0;
+	border-bottom: 1px solid #57595C;
+	text-transform: uppercase;
+	font-weight: 500;
+
+	@include tp-placeholder{
+		color: #57595C;
+	}
+
+	&:focus{
+		border-color: var(--tp-common-black);
+		&::placeholder{
+			opacity: 0;
+		}
+	}
+
+}
+
+textarea{
+	line-height: 1.4;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+*::-moz-selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+*::selection {
+	background: #333;
+	color: #fff;
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	color: var(--tp-common-black);
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 500;
+}
+*::placeholder {
+	color: var(--tp-common-black);
+	font-size: 15px;
+	opacity: 1;
+	font-weight: 500;
+}

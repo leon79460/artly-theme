@@ -1,0 +1,52 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  6.3 Brand
+/*----------------------------------------*/
+.tp-brand-title {
+    & h3{
+        font-size: 100px;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+    }
+}
+
+.grad-bg{
+    background: rgb(0,88,255);
+    background: radial-gradient(circle, rgba(0,88,255,1) 0%, rgba(255,76,0,1) 96%); 
+}
+.tp-brand-item-border {
+	border: 1px solid #57595C;
+	min-height: 125px;
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    border-radius: 10px;
+}
+
+.brand-section-title {
+    border-bottom: 1px solid #373737;
+    & h2 {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 0;
+        background: #1a1a1a;
+        display: inline-block;
+        @include transform(translateY(19px));
+        padding: 0 30px;
+        @media #{$xs}{
+            font-size: 22px;
+        }
+      }
+}
+.tp-brand-normal-wrapper{
+    border: 1px solid #ddd;
+    padding: 80px 75px;
+}
+.tp-brand-logo-wrapper{
+    @media #{$lg,$md,$xs}{
+        padding-left: 0;
+    }
+}

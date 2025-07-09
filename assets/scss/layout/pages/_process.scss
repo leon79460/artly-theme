@@ -1,0 +1,127 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.12 Process
+/*----------------------------------------*/
+.tpprocess{
+    &-border{
+        border: 1px solid #57595C;
+        border-radius: 166px;
+    }
+    &__step{
+        & span{
+            padding: 4px 24px;
+            background-color: var(--tp-theme-orange);
+            color: #fff;
+            border-radius: 30px;
+            @include transition(.3s);
+        }
+    }
+    &:hover{
+        & .tpprocess__step{
+            & span{
+                background-color: var(--tp-theme-color);
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+    }
+    & p{
+
+    }
+    &__angle{
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+    }
+    &__count {
+        background: #FF3838;
+        height: 77px;
+        width: 77px;
+        border-radius: 100%;
+        color: #fff;
+        text-align: center;
+        line-height: 58px;
+        font-size: 30px;
+        font-family: var(--tp-font-heading);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border: 8px solid #fff;
+    }
+    &__icon{
+        & span{
+            font-size: 85px;
+            background: #FFE9C9;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            text-align: center;
+            line-height: 175px;
+            border-radius: 100%;
+            color: #000;
+        }
+        &-2{
+            @media #{$xs}{
+                margin-bottom: 30px;
+            }
+            & span{
+                height: 259px;
+                width: 259px;
+                font-size: 143px;
+                line-height: 253px;
+                margin: auto;
+            }
+            &-pos{
+                & span{
+                    line-height: 350px;
+                }
+                & .tpprocess__count {
+                    bottom: inherit;
+                    top: -20px;
+                }
+            }
+            &-width{
+                & span{
+                }
+            }
+        }
+    
+    }
+}
+.tpprocess-2{
+    margin-left: -6px;
+    margin-top: -33px;
+    @media #{$xs}{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+.tpprocess-3 {
+	margin-left: -5px;
+	margin-top: -6px;
+    @media #{$xs}{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+.tpprocess-4 {
+	margin-top: -25px;
+	margin-left: -5px;
+    @media #{$xs}{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+.tpprocess__shape {
+	position: absolute;
+	bottom: -44px;
+	left: 0;
+}
+.tpprocess__shape-3{
+	bottom: inherit;
+	top: -40px;
+}

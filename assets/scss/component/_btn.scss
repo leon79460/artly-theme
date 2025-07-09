@@ -1,0 +1,223 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.4 Button
+/*----------------------------------------*/
+
+.tp-btn {
+	background: var(--tp-theme-color);
+	padding: 16px 45px;
+	font-size: 18px;
+	font-family: var(--tp-font-heading);
+	border-radius: 5px;
+	display: inline-block;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	& > i{
+		height: 100%;
+		width: 22px;
+		background-color: #71A2FF;
+		position: absolute;
+		bottom: -2px;
+		right: -12px;
+		@include transform(rotate(13deg));
+		@include transition(.3s);
+	}
+	&:hover{
+		& .tp-btn-y-1{
+			@include transform(translateY(-100%));
+		}
+		& .tp-btn-y-2{
+			@include transform(translateY(0));
+		}
+		& i{
+			right: -100%;
+		}
+		color: #fff;
+	}
+	&-orange{
+		background: var(--tp-theme-orange);
+		padding: 16px 45px;
+		font-size: 18px;
+		font-family: var(--tp-font-heading);
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		color: #fff;
+		& > i{
+			height: 100%;
+			width: 22px;
+			background-color: #FFAD8A;
+			position: absolute;
+			bottom: -2px;
+			right: -12px;
+			@include transform(rotate(13deg));
+			@include transition(.3s);
+		}
+		&:hover{
+			color: #fff;
+			& .tp-btn-y-1{
+				@include transform(translateY(-100%));
+			}
+			& .tp-btn-y-2{
+				@include transform(translateY(0));
+			}
+			& i{
+				right: -100%;
+			}
+		}
+	}
+	&-sec {
+		background: var(--tp-theme-color-2);
+		padding: 16px 45px;
+		font-size: 18px;
+		font-family: var(--tp-font-heading);
+		border-radius: 5px;
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		&-lg{
+			padding: 21px 48px;
+		}
+		& > i{
+			height: 100%;
+			width: 22px;
+			background-color: #E5CF00;
+			position: absolute;
+			bottom: -2px;
+			right: -12px;
+			@include transform(rotate(13deg));
+			@include transition(.3s);
+		}
+		&:hover{
+			& .tp-btn-y-1{
+				@include transform(translateY(-100%));
+			}
+			& .tp-btn-y-2{
+				@include transform(translateY(0));
+			}
+			& i{
+				right: -100%;
+			}
+		}
+	}
+	&-circle{
+		font-family: var(--tp-font-heading);
+		font-size: 60px;
+		color: #fff;
+		opacity: 0.3;
+		border: 2px solid rgba(255, 255, 255, 0.2);
+		padding: 48px 75px;
+		display: inline-block;
+		line-height: 1;
+		border-radius: 100%;
+		@include transition(.3s);
+		@media #{$xs}{
+			font-size: 45px;
+		}
+		&:hover{
+			background: var(--tp-theme-color);
+			color: #fff;
+			border-color: var(--tp-theme-color);
+			opacity: 1;
+		}
+	}
+	&-wrap{
+		position: relative;
+		overflow: hidden;
+		display: block;
+		& span{
+			@include transition(.2s);
+			display: block;
+			& i{
+				font-size: 15px;
+				@include transform(rotate(-40deg));
+				margin-left: 5px;
+			}
+		}
+	}
+	&-y-2 {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		@include transform(translateY(100%));
+	}
+	&-border {
+		border: 1px solid #57595C;
+		padding: 12px 35px;
+		display: inline-block;
+		font-size: 18px;
+		color: #0A0E1A;
+		font-family: var(--tp-font-heading);
+		&:hover{
+            background-color: var(--tp-theme-color);
+			color: #fff;
+			border-color: var(--tp-theme-color);
+        }
+	}
+	&-200{
+		padding: 16px 35px;
+	}
+}
+.tp-text-btn{
+	font-size: 18px;
+	color: #0a0e1a;
+	font-family: var(--tp-font-heading);
+	@include flexbox();
+	align-items: center;
+	& i{
+		margin-left: 8px;
+		@include transform(rotate(-45deg));
+	}
+	&-white{
+		color: #A3AEC3;
+	}
+	&:hover{
+		color: var(--tp-theme-color);
+	}
+}
+.circle-icon-btn {
+	height: 60px;
+	width: 60px;
+	background:var(--tp-theme-orange);
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 60px;
+	font-size: 15px;
+	&:hover{
+		background-color: var(--tp-theme-color);
+		color: #fff;
+		border-color: var(--tp-theme-color);
+	}
+	& i{
+		@include transform(rotate(-45deg));
+	}
+}
+
+.tp-icon-btn {
+	font-size: 55px;
+	position: relative;
+	display: inline-block;
+	& span {
+		height: 38px;
+		width: 38px;
+		background: #F8F5FF;
+		display: inline-block;
+		position: absolute;
+		right: -11px;
+		z-index: -1;
+		border-radius: 30px;
+		top: 8px;
+		transition: .3s;
+	}
+	&:hover{
+		& span{
+			background-color: var(--tp-theme-color-2);
+		}
+	}
+}

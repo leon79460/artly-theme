@@ -1,0 +1,62 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.2 Award
+/*----------------------------------------*/
+.tpaward-wrapper{
+    & .row{
+        & [class*="col-"]:nth-child(even){
+            & .tpaward{
+                padding-left: 55px;
+                border-left: 1px solid #57595c;
+                @media #{$xs}{
+                    padding-left: 0;
+                    border-left: 0;
+                }
+            } 
+        }
+        & [class*="col-"]:nth-child(1){
+            & .tpaward{
+                padding-top: 0;
+            } 
+        }
+        & [class*="col-"]:nth-child(2){
+            & .tpaward{
+                padding-top: 0;
+            } 
+        }
+        & [class*="col-"]:nth-last-child(-n+2){
+            & .tpaward{
+                padding-bottom: 0;
+                border-bottom: 0;
+                @media #{$xs}{
+                    border-bottom: 1px solid #57595c;
+                    padding-bottom: 38px;
+                }
+            } 
+        }
+    }
+}
+
+.tpaward{
+    border-bottom: 1px solid #57595c;
+    padding: 38px 0;
+    @media #{$xs}{
+        padding-top: 38px !important;
+        padding-top: 38px !important;
+    }
+    &--wrapper{
+        padding-right: 80px; 
+    }
+    & span{
+        font-family: var( --tp-font-heading);
+        font-size: 20px;
+        color: #57595c;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__title{
+        font-size: 30px;
+        margin: 0;
+    }
+}

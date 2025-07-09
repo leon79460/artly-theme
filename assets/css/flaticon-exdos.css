@@ -1,0 +1,260 @@
+/*!
+*    ______ _       _   _
+*    |  ____| |     | | (_)
+*    | |__  | | __ _| |_ _  ___ ___  _ __
+*    |  __| | |/ _` | __| |/ __/ _ \| '_ \
+*    | |    | | (_| | |_| | (_| (_) | | | |
+*    |_|    |_|\__,_|\__|_|\___\___/|_| |_|
+*
+*         https://www.flaticon.com
+*/
+
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon_exdos.woff2") format("woff2"),
+url("../fonts/flaticon_exdos.woff") format("woff"),
+url("../fonts/flaticon_exdos.eot#iefix") format("embedded-opentype"),
+url("../fonts/flaticon_exdos.ttf") format("truetype"),
+url("../fonts/flaticon_exdos.svg?") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.flaticon-concentration:before {
+    content: "\f101";
+}
+.flaticon-sharing:before {
+    content: "\f102";
+}
+.flaticon-diagonal:before {
+    content: "\f103";
+}
+.flaticon-search:before {
+    content: "\f104";
+}
+.flaticon-phone-book:before {
+    content: "\f105";
+}
+.flaticon-menu:before {
+    content: "\f106";
+}
+.flaticon-cooperation:before {
+    content: "\f107";
+}
+.flaticon-connections:before {
+    content: "\f108";
+}
+.flaticon-right-arrow:before {
+    content: "\f109";
+}
+.flaticon-merging:before {
+    content: "\f10a";
+}
+.flaticon-quotes:before {
+    content: "\f10b";
+}
+.flaticon-next-button:before {
+    content: "\f10c";
+}
+.flaticon-geometric:before {
+    content: "\f10d";
+}
+.flaticon-geometric-1:before {
+    content: "\f10e";
+}
+.flaticon-geometric-2:before {
+    content: "\f10f";
+}
+.flaticon-geometric-3:before {
+    content: "\f110";
+}
+.flaticon-geometric-4:before {
+    content: "\f111";
+}
+.flaticon-triangle:before {
+    content: "\f112";
+}
+.flaticon-geometric-5:before {
+    content: "\f113";
+}
+.flaticon-3d-shapes:before {
+    content: "\f114";
+}
+.flaticon-geometric-6:before {
+    content: "\f115";
+}
+.flaticon-geometric-7:before {
+    content: "\f116";
+}
+.flaticon-geometric-8:before {
+    content: "\f117";
+}
+.flaticon-megaphone:before {
+    content: "\f118";
+}
+.flaticon-idea:before {
+    content: "\f119";
+}
+.flaticon-contract:before {
+    content: "\f11a";
+}
+.flaticon-idea-1:before {
+    content: "\f11b";
+}
+.flaticon-customer-feedback:before {
+    content: "\f11c";
+}
+.flaticon-solution:before {
+    content: "\f11d";
+}
+.flaticon-flag:before {
+    content: "\f11e";
+}
+.flaticon-telemarketer:before {
+    content: "\f11f";
+}
+.flaticon-networking:before {
+    content: "\f120";
+}
+.flaticon-computer:before {
+    content: "\f121";
+}
+.flaticon-vulnerability:before {
+    content: "\f122";
+}
+.flaticon-half:before {
+    content: "\f123";
+}
+.flaticon-map-location:before {
+    content: "\f124";
+}
+.flaticon-chat:before {
+    content: "\f125";
+}
+.flaticon-call:before {
+    content: "\f126";
+}
+.flaticon-quotation-marks:before {
+    content: "\f127";
+}
+
+
+
+
+/* 
+.flaticon-half:before {
+    content: "\f101";
+}
+.flaticon-vulnerability:before {
+    content: "\f102";
+}
+.flaticon-computer:before {
+    content: "\f103";
+}
+.flaticon-networking:before {
+    content: "\f104";
+}
+.flaticon-telemarketer:before {
+    content: "\f105";
+}
+.flaticon-flag:before {
+    content: "\f106";
+}
+.flaticon-solution:before {
+    content: "\f107";
+}
+.flaticon-customer-feedback:before {
+    content: "\f108";
+}
+.flaticon-idea-1:before {
+    content: "\f109";
+}
+.flaticon-contract:before {
+    content: "\f10a";
+}
+.flaticon-idea:before {
+    content: "\f10b";
+}
+.flaticon-megaphone:before {
+    content: "\f10c";
+}
+.flaticon-geometric-8:before {
+    content: "\f10d";
+}
+.flaticon-geometric-7:before {
+    content: "\f10e";
+}
+.flaticon-geometric-6:before {
+    content: "\f10f";
+}
+.flaticon-3d-shapes:before {
+    content: "\f110";
+}
+.flaticon-geometric-5:before {
+    content: "\f111";
+}
+.flaticon-triangle:before {
+    content: "\f112";
+}
+.flaticon-geometric-4:before {
+    content: "\f113";
+}
+.flaticon-geometric-3:before {
+    content: "\f114";
+}
+.flaticon-geometric-2:before {
+    content: "\f115";
+}
+.flaticon-geometric-1:before {
+    content: "\f116";
+}
+.flaticon-geometric:before {
+    content: "\f117";
+}
+.flaticon-next-button:before {
+    content: "\f118";
+}
+.flaticon-quotes:before {
+    content: "\f119";
+}
+.flaticon-merging:before {
+    content: "\f11a";
+}
+.flaticon-right-arrow:before {
+    content: "\f11b";
+}
+.flaticon-connections:before {
+    content: "\f11c";
+}
+.flaticon-cooperation:before {
+    content: "\f11d";
+}
+.flaticon-menu:before {
+    content: "\f11e";
+}
+.flaticon-phone-book:before {
+    content: "\f11f";
+}
+.flaticon-search:before {
+    content: "\f120";
+}
+.flaticon-diagonal:before {
+    content: "\f121";
+}
+.flaticon-sharing:before {
+    content: "\f122";
+}
+.flaticon-concentration:before {
+    content: "\f123";
+}
+ */

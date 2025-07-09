@@ -1,0 +1,75 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  2.1 Accordion
+/*----------------------------------------*/
+
+.tp-accordion{
+    &-header{
+        margin: 0;
+    }
+    &-item{
+        border: 1px solid #57595c;
+        border-radius: 10px; 
+    }
+    &-button {
+        font-size: 20px;
+        width: 100%;
+        padding: 23px 30px;
+        text-align: left;
+        @include flexbox();
+        justify-content: space-between;
+        & span{
+            margin-left: 20px;
+            font-size: 16px;
+            color: #57595c;
+        }
+        &.collapsed{
+            & span{
+                @include transform(rotate(-90deg));
+            }
+        }
+    }
+    &-body {
+        margin: 0 30px;
+        border-top: 1px solid #57595c;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+.tp-faq{
+    &-button {
+        text-align: left;
+        font-size: 24px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid transparent;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        display: block;
+        width: 100%;
+        &:after{
+            content: "-";
+        }
+        &.collapsed{
+            border-bottom: 1px solid #D9D9D9;
+            margin-bottom: 20px;
+            &:after{
+                content: "+";
+            }
+        }
+        
+    }
+    &-thumb{
+        @media #{$lg,$md,$xs}{
+           margin-left: 0;
+        }
+        & img{
+            max-width: inherit;
+            @media #{$md,$xs}{
+                max-width: 100%;
+             }
+        }
+    }
+}

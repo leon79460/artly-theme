@@ -1,0 +1,104 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 Header Style
+/*----------------------------------------*/
+
+.custom-row{
+    @include flexbox();
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media #{$xs}{
+        justify-content: center;
+    }
+}
+.tpfact{
+    &__icon{
+        & span{
+            font-size: 110px;
+            display: inline-flex;
+            color: var(--tp-theme-color-2);
+        }
+    }
+    &__title{
+        font-size: 30px;
+        color: #fff;
+        opacity: 0.5;
+        
+    }
+    &__text{
+        & span{
+            font-family: var( --tp-font-heading);
+            font-size: 100px;
+            color: #fff;
+            display: inline-block;
+            line-height: 1;
+            @media #{$xs}{
+                font-size: 75px;
+            }
+        }
+    }
+    &-2{
+        & .tpfact{
+            &__icon{
+                & span{
+                    color: #57595C;
+                }
+                &-2{
+                    position: relative;
+                    & span{
+                        color: var(--tp-theme-orange);
+                        @media #{$xl}{
+                            font-size: 60px;
+                        }
+                    }
+                    &:after{
+                        content: "";
+                        height: 100px;
+                        width: 1px;
+                        background-color: #D9D9D9;
+                        position: absolute;
+                        right: 0;
+                        top: 11px;
+                        @media #{$xl}{
+                            height: 76px;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            &__text{
+                & span{
+                    color: #0A0E1A;
+                    @media #{$xl}{
+                        font-size: 60px;
+                    }
+                    @media #{$md}{
+                        font-size: 60px;
+                    }
+                }
+            }
+            &__title{
+                color: #57595C;
+                opacity: 1;
+                @media #{$xl}{
+                    font-size: 17px;
+                }
+                @media #{$md}{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+.cols{
+    @media #{$md,$sm}{
+        width: 50%;
+    }
+}
+.tp-about-fact-box{
+    @media #{$xs}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

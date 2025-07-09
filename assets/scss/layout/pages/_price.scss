@@ -1,0 +1,54 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.11 Pricing
+/*----------------------------------------*/
+
+
+.tpprice{
+    border-radius: 20px;
+    &__icon {
+        position: relative;
+        margin-bottom: 4px;
+        & span {
+            font-size: 115px;
+            position: relative;
+            z-index: 1;
+            margin-left: 23px;
+        }
+        &-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__price {
+        & h4 {
+            font-size: 70px;
+        }
+    }
+    &__title {
+        font-size: 30px;
+    }
+    &__features{
+        list-style: none;
+        & li{
+            color: #57595C;
+            margin-bottom: 10px;
+            @include flexbox();
+            & i{
+                margin-right: 10px;
+                font-size: 18px;
+                margin-top: 5px;
+            }
+            & span{
+                font-size: 17px;
+            }
+        }
+    }
+    &__sep{
+        border-top: 1px solid #57595C;
+        margin-top: 22px;
+        margin-bottom: 23px;
+    }
+}
