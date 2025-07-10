@@ -150,6 +150,8 @@ function artly_scripts() {
 add_action( 'wp_enqueue_scripts', 'artly_scripts' );
 
 
+if ( class_exists( 'Kirki' ) ) {
 include_once ('inc/artly-kirki.php');
+}
 include_once ('inc/template-function.php');
 include_once ('inc/nav-walker.php');
