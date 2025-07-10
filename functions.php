@@ -41,7 +41,7 @@ function artly_setup() {
 	set_post_thumbnail_size( 825, 510, true );
 
 	// This theme uses wp_nav_menu() in two locations.
-register_nav_menus( array(
+  register_nav_menus( array(
 		'main-menu' => __( 'Main Menu',      'artly' ),
 		'footer-menu' => __( 'Footer Menu',      'artly' ),
 	) );
@@ -65,6 +65,7 @@ register_nav_menus( array(
 
 	// widges support hook 
 	remove_theme_support('widgets-block-editor');
+	add_filter('use_block_editor_for_post', '__return_false', 10); // Disables Gutenberg for posts
 	
 }
 endif; // artly_setup
