@@ -10,7 +10,7 @@ $post_url = function_exists('get_field') ? get_field('post_url') : '';
             <div class="tp-blog-video">
                 <div class="tp-postbox-thumb mb-35 ratio ratio-16x9">
                    <?php echo wp_oembed_get($post_url); ?>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
