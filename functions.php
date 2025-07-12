@@ -77,6 +77,15 @@ add_action( 'after_setup_theme', 'artly_setup' );
  */
 function arlty_register_widget_sidebar() {
 	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'artly' ),
+		'id'            => 'blog-sidebar',
+		'description'   => __( 'Widgets in this area will be shown on Blog widget.', 'textdomain' ),
+		'before_widget' => '<div id="%1$s" class="tp-blog-sidebar-widget mb-30 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-blog-sidebar-title tp-fs-24 mb-25">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar 1', 'artly' ),
 		'id'            => 'footer-sidebar-1',
 		'description'   => __( 'Widgets in this area will be shown on footer widget 1.', 'textdomain' ),

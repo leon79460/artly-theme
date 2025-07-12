@@ -86,3 +86,19 @@ function artly_footer_menu() {
   ));
 
 }
+
+// Blog Pagination Function
+function artly_pagination(){
+  $pages = paginate_links( array( 
+      'type' => 'array',
+      'prev_text'    => __('<i class="fal fa-long-arrow-left"></i>','arlty'),
+      'next_text'    => __('<i class="fal fa-long-arrow-right"></i>','artly'),
+  ) );
+      if( $pages ) {
+      echo '<ul>';
+      foreach ( $pages as $page ) {
+          echo "<li>$page</li>";
+      }
+      echo '</ul>';
+  }
+}
