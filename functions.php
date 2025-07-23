@@ -158,9 +158,28 @@ function artly_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'artly_scripts' );
 
+/**
+ * Generate custom search form
+ *
+ * @param string $form Form HTML.
+ * @return string Modified form HTML.
+ */
+function artly_search_form( $form ) {
+	$form = ' <form class="tp-blog-form position-relative" method="get" action="' . home_url( '/' ) . '">
 
+							<input type="text" value="' . get_search_query() . '" name="s" placeholder="'. esc_attr__( 'Search' ) .'">
+							<button type="submit"><i class="far fa-arrow-right"></i></button>
+
+            </form>';
+
+	return $form;
+}
+add_filter( 'get_search_form', 'artly_search_form' );
+
+
+include_once ('inc/template-function.php');
+include_once ('inc/nav-walker.php');
+include_once ('inc/sidebar-recent-post.php');
 if ( class_exists( 'Kirki' ) ) {
 include_once ('inc/artly-kirki.php');
 }
-include_once ('inc/template-function.php');
-include_once ('inc/nav-walker.php');

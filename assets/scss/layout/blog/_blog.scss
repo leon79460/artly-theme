@@ -239,7 +239,8 @@
       width: 60px;
       display: inline-block;
       transition: 0.3s;
-      &:hover {
+      &:hover,
+      &.current {
         background-color: var(--tp-theme-color);
         border-color: var(--tp-theme-color);
         color: #fff;
