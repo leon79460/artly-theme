@@ -1,0 +1,30 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.3 Footer Style 3
+/*----------------------------------------*/
+
+.tp-footer-social-box{
+	& a {
+		border: 1px solid rgba($color: #fff, $alpha: .15);
+		display: block;
+		text-align: center;
+		color: #fff;
+		font-size: 30px;
+		text-transform: uppercase;
+		padding: 35px 30px;
+		font-family: var(--tp-font-heading);
+		border-radius: 20px;
+		&:hover{
+			background-color: var(--tp-theme-color);
+			color: #fff;
+			border-color: var(--tp-theme-color);
+		}
+		@media #{$lg}{
+			font-size: 22px;
+		}
+		@media #{$sm}{
+			font-size: 22px;
+		}
+	}
+}

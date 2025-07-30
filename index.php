@@ -15,7 +15,7 @@ $has_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center 
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part('template-parts/content', get_post_format()); ?> 
                 <?php endwhile; else : ?>
-                    <p> <?php esc_html_e( 'Sorry, no posts available in backend.' ); ?> </p>
+                    <p> <?php esc_html__( 'Sorry, no posts available in backend.' ); ?> </p>
                 <?php endif; ?>
 
                 <div class="tp-pagination mb-60">
@@ -25,11 +25,13 @@ $has_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center 
                 </div>
 
                 <!-- Sidebar Section -->
-                    <?php if (is_active_sidebar('blog-sidebar')): ?> 
+                <?php if (is_active_sidebar('blog-sidebar')): ?> 
                 <div class="col-xl-4 col-lg-4">
                     <?php get_sidebar(); ?> 
                 </div>
-                    <?php endif; ?> 
+                <?php endif; ?> 
+
+            </div>
             </div>
         </div>
     </section>

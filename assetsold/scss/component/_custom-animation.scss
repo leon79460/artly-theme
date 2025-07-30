@@ -1,0 +1,220 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.5 Custom Animation
+/*----------------------------------------*/
+
+
+
+.tpFadeInUp {
+  opacity: 0; /* Start invisible */
+  animation: tpFadeInUp 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+}
+@keyframes tpFadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); /* Start slightly below */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End at original position */
+  }
+}
+
+
+@keyframes tpslideInUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .tpfadeInLeft {
+    opacity: 0; /* Start invisible */
+    animation: tpfadeInLeft 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+  }
+  @keyframes tpfadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px); /* Start slightly to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at original position */
+    }
+}
+
+@keyframes tpfadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(20px); /* Start slightly to the left */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0); /* End at original position */
+  }
+}
+
+
+  .tpSkillInLeft {
+    opacity: 0; /* Start invisible */
+    animation: tpSkillInLeft 2s ease-out forwards; /* 2 seconds duration, ease-out effect */
+  }
+  @keyframes tpSkillInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px); /* Start slightly to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at original position */
+    }
+}
+
+
+
+  .slideinup{
+    -webkit-animation-name:slideinup;
+    animation-name:slideinup
+}
+@keyframes slideinup {
+    0% {
+      opacity: 0;
+      transform: translateY(70px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideinright {
+    0% {
+      opacity: 0;
+      transform: translateX(70px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideindown {
+    0% {
+      opacity: 0;
+      transform: translateY(-70px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.slideinleft{
+    -webkit-animation-name:slideinleft;
+    animation-name:slideinleft
+}
+  @keyframes slideinleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-70px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slidebottomright {
+    0% {
+      opacity: 0;
+      transform: translateX(100px) translateY(100px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes slidetopleft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px) translateY(-100px);
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+    0% {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+    75% {
+      border-top-color: #fff;
+      border-left-color: #fff;
+      border-right-color: #fff;
+      border-bottom-color: transparent;
+    }
+    100% {
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+  /*img-animation**********************/
+  .img-custom-anim-right {
+    animation: img-anim-right 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    opacity: 0;
+  }
+  
+  @keyframes img-anim-right {
+    0% {
+      transform: translateX(5%);
+      clip-path: inset(0 0 0 100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+  .img-custom-anim-left {
+    animation: img-anim-left 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1) 0.4s;
+    opacity: 0;
+  }
+  
+  @keyframes img-anim-left {
+    0% {
+      transform: translateX(-5%);
+      clip-path: inset(0 100% 0 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+  .img-custom-anim-top {
+    animation: img-anim-top 1.3s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
+    opacity: 0;
+  }
+  
+  @keyframes img-anim-top {
+    0% {
+      transform: translateY(-5%);
+      clip-path: inset(0 0 100% 0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }

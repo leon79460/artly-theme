@@ -1,0 +1,108 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.3 Default Spacing
+/*----------------------------------------*/
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 140 {
+    .mt-#{1 * $i}{margin-top: 1px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 140 {
+    .mb-#{1 * $i}{margin-bottom: 1px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 100 {
+    .ml-#{1 * $i}{margin-left: 1px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 100 {
+    .mr-#{1 * $i}{margin-right: 1px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 150 {
+    .pt-#{1 * $i}{padding-top: 1px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 150 {
+    .pb-#{1 * $i}{padding-bottom: 1px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 130 {
+    .pl-#{1 * $i}{padding-left: 1px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 100 {
+    .pr-#{1 * $i}{padding-right: 1px *$i;}
+}
+
+
+
+.pt-290{
+    padding-top: 290px;
+}
+.pt-210{
+    padding-top: 210px;
+}
+.pt-220{
+    padding-top: 220px;
+}
+.pt-240{
+    padding-top: 240px;
+}
+.pt-275{
+    padding-top: 275px;
+}
+.pt-265{
+    padding-top: 265px;
+}
+.pl-240{
+    padding-left: 240px;
+}
+.pb-170{
+    padding-bottom: 170px;
+}
+.tp-section-m-100{
+    margin: 0 100px;
+    @media #{$xl,$lg,$md,$xs}{
+        margin: 0px;
+    }
+}
+.plr-100{
+    padding-left: 100px;
+    padding-right: 100px;
+    @media #{$xl}{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media #{$lg,$md,$xs}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.plr-85{
+    padding-left: 85px;
+    padding-right: 85px;
+    @media #{$xl}{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media #{$lg,$md}{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$xs}{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

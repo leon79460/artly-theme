@@ -69,7 +69,6 @@ function artly_main_menu() {
     'fallback_cb'     => ' Artly_Walker_Nav_Menu::fallback', 
     'walker'          => new Artly_Walker_Nav_Menu, 
   ));
-
 }
 
 
@@ -84,7 +83,6 @@ function artly_footer_menu() {
     'fallback_cb'     => ' Artly_Walker_Nav_Menu::fallback', 
     'walker'          => new Artly_Walker_Nav_Menu, 
   ));
-
 }
 
 // Blog Pagination Function
@@ -100,5 +98,22 @@ function artly_pagination(){
           echo "<li>$page</li>";
       }
       echo '</ul>';
+  }
+}
+
+
+// Artly tags function 
+function artly_tags(){
+  $post_tags = get_the_tags(); 
+  if ($post_tags) {
+    foreach ($post_tags as $tag) {
+      ?>
+      <a href= " <?php echo get_tag_link($tag); ?>"><?php echo esc_html($tag->name); ?> </a>
+      <?php 
+    }
+  } else {
+    ?> 
+    <i> <?php echo esc_html__('No tags found', 'artly'); ?> </i>
+    <?php
   }
 }

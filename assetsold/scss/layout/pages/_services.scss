@@ -1,0 +1,227 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.13 Servicess
+/*----------------------------------------*/
+.tpservices {
+    margin-right: -1px;
+	border: 1px solid #57595C;
+	padding: 40px;
+    transition: .3s;
+    @media #{$xl}{
+        padding: 40px 30px;
+    }
+    &__icon{
+        & span{
+            font-size: 92px;
+            color: var(--tp-black-common);
+            display: inline-flex;
+            position: relative;
+            z-index: 2;
+        }
+        &-shape {
+            position: absolute;
+            left: 0;
+            top: -6px; 
+            z-index: 1;
+        }
+    }
+    &__title{
+        font-size: 30px;
+        @media #{$xl}{
+            font-size: 25px;
+        }
+        @media #{$lg}{
+            font-size: 25px;
+        }
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+    }
+    &__text{
+        & p{
+
+        }
+    }
+    &__list{
+        & ul {
+            list-style: none;
+            & li{
+                margin-bottom: 5px;
+                color: #57595c;
+                &::before{
+                    background-color: #57595c;
+                    content: "";
+                    height: 8px;
+                    width: 8px;
+                    display: inline-block;
+                    border-radius: 30px;
+                    margin-right: 10px;
+                    @include transform(translateY(-1px));
+                }
+            }
+        }
+    }
+    &:hover{
+        background-color: var(--tp-rom-color);
+        & .tp-sv-btn{
+            background-color: var(--tp-theme-color);
+            color: #fff;
+        }
+    }
+    &-2{
+        margin-top: -1px;
+        padding-bottom: 14px;
+        .tpservices__icon {
+            & span {
+                font-size: 57px;
+                color: var(--tp-black-common);
+                display: inline-flex;
+                margin-left: 25px;
+            }
+        }
+    }
+}
+.tpservices__icon_btn {
+    & a {
+        font-size: 45px;
+        display: inline-flex;
+        &:hover{
+            color: var(--tp-theme-orange);
+        }
+    }
+}
+
+.tp-sv-btn {
+	background: var(--tp-rom-color);
+	display: block;
+	padding: 6px 28px;
+	font-size: 18px;
+	font-family: var(--tp-font-heading);
+    @include flexbox();
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s;
+    & i{
+        @include transform(rotate(-45deg));
+    }
+}
+.tpservices-4-spacing{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.tp-services-bg-area{
+    background-color: #D6F0FF;
+    border-radius: 140px;
+    @media #{$md,$xs}{
+        border-radius: 0;
+    }
+}
+.tp-service-tab{
+    & .nav-links:first-child{
+        & .tpsvtab {
+            border-top:1px solid #2b303f;
+        }  
+    }
+    & .active{
+        & .tpsvtab__title{
+            color: var(--tp-theme-orange-2);
+        }
+    }
+}
+.tpsvtab{
+    border-bottom: 1px solid #2b303f;
+    padding: 17px 0;
+    padding-bottom: 30px;
+    cursor: pointer;
+    &__num{
+        margin-top: 13px;
+    }
+    &__title{
+        font-size: 100px;
+        @media #{$xl}{
+            font-size: 46px;
+        }
+        @media #{$lg}{
+            font-size: 35px;
+        }
+        @media #{$md}{
+            font-size: 77px;
+        }
+        @media #{$xs}{
+            font-size: 33px;
+        }
+    }
+    &__content{
+        & p{
+            color: #B1B4BA;
+            margin: 0;
+        }
+    }
+}
+.tp-service-tab-wrapper{
+    @media #{$md}{
+        padding-left: 0;
+    }
+    @media #{$xs}{
+        padding-left: 0;
+    }
+}
+
+.tp-services-widget{
+    background: #FBF6EF;
+    padding: 40px;
+    @media #{$xl}{
+        padding: 30px;
+    }
+    & ul {
+        & li {
+            margin-bottom: 15px;
+            list-style: none;
+            & a{
+                color: #57595C;
+                display: block;
+                padding: 20px 25px;
+                line-height: 1;
+                position: relative;
+                background-color: #fff;
+                border: 1px solid #57595C;
+                border-radius: 5px;
+                &:hover{
+                    background-color: var(--tp-theme-color);
+                    color: #fff;
+                    border-color: var(--tp-theme-color);
+                }
+                &:after{
+                    content: "\f061";
+                    font-family: "Font Awesome 5 Pro";
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-40deg);
+                }
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-title {
+        & span {
+            height: 10px;
+            width: 10px;
+            border-radius: 30px;
+            background: var(--tp-theme-color);
+            display: inline-block;
+            margin-right: 5px;
+            transform: translateY(-3px);
+        }
+    }
+}
+.tp-services-widget-banner-text {
+	position: absolute;
+	bottom: 50px;
+	left: 40px;
+	right: 40px;
+	text-align: center;
+}

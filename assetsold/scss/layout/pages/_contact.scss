@@ -1,0 +1,111 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.4 Contact
+/*----------------------------------------*/
+
+
+.fs-100{
+    font-size: 100px;
+    @media #{$xl}{
+        font-size: 85px;
+    }
+    @media #{$xs}{
+        font-size: 70px;
+    }
+}
+.tpform-title{
+    font-size: 30px;
+}
+.contact-form-box{
+    & input, & textarea{
+        border-color: #57595c;
+    }
+}
+.tp-contact-img{
+    & img{
+        max-width: inherit;
+        margin-left: -40px;
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0px;
+            max-width: 100%;
+        }
+    }
+}
+.tp-contact-form-box{
+    & input, & textarea{
+        height:60px;
+        border: 1px solid #57595C;
+        padding: 0 25px;
+        border-radius: 10px;
+        font-weight: 500;
+    }
+    & .p-relative {
+        & i {
+            position: absolute;
+            right: 25px;
+            top: 22px;
+        }
+    }
+    & textarea{
+        height: 160px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.tp-contact{
+    &-info {
+        border: 1px solid #57595C;
+        padding: 50px 40px;
+        border-radius: 15px;
+        &-icon {
+            & span {
+                font-size: 85px;
+                color: #000001;
+            }
+        }
+        &-text {
+            & span {
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            & p {
+                font-size: 30px;
+                color: #0A0E1A;
+                line-height: 1.2;
+                font-family: var(--tp-font-heading);
+                margin: 0;
+                @media #{$xl}{
+                    font-size: 25px;
+                }
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+                @media #{$sm}{
+                    font-size: 25px;
+                }
+                a{
+                    &:hover{
+                        color: var(--tp-theme-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tp-map-area iframe {
+	height: 700px;
+	width: 100%;
+    @media #{$xl}{
+        height: 600px;
+    }
+    @media #{$lg}{
+        height: 500px;
+    }
+    @media #{$md,$xs}{
+        height: 400px;
+    }
+}

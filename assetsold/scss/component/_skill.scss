@@ -1,0 +1,55 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Skill
+/*----------------------------------------*/
+
+.tp-skill-item {
+    & label {
+        font-size: 15px;
+        font-weight: 500;
+        color: #0A0E1A;
+        margin-bottom: 8px;
+        line-height: 1;
+    }
+    & .progress-bar {
+        background-color: var(--tp-theme-color);
+    }
+    & .progress, & .progress-stacked {
+        height: 12px;
+        background-color: transparent;
+        border-radius: 4px;
+    }
+
+}
+.progress{
+    &-outer {
+        border: 1px solid #57595C;
+        padding: 3px;
+        border-radius: 5px;
+        position: relative;
+    }
+    &-num {
+        position: absolute;
+        left: calc(25% - 31px);
+        top: -36px;
+        background: var(--tp-theme-color);
+        color: #fff;
+        padding: 6px 5px;
+        font-size: 11px;
+        line-height: 1;
+        border-radius: 4px;
+        &:before{
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 0 10px 10px 0;
+            border-color: transparent var(--tp-theme-color) transparent transparent;
+            transform: rotate(0deg);
+            content: "";
+            position: absolute;
+            top: 99%;
+            right: 8px
+        }
+    }
+}

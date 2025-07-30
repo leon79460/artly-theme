@@ -164,6 +164,7 @@ add_action( 'wp_enqueue_scripts', 'artly_scripts' );
  * @param string $form Form HTML.
  * @return string Modified form HTML.
  */
+
 function artly_search_form( $form ) {
 	$form = ' <form class="tp-blog-form position-relative" method="get" action="' . home_url( '/' ) . '">
 

@@ -1,0 +1,328 @@
+@use '../../utils' as *;
+
+
+/*----------------------------------------*/
+/*  6.15 Testimonial
+/*----------------------------------------*/
+
+.tp-testimonial {
+    &-author{
+        & img{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+    &-item{
+        &.pl-60{
+            @media #{$md,$xs}{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    &-main-wrapper{
+        margin-left: -55px;
+        @media #{$xs}{
+            margin-left: 0;
+        }
+    }
+	&-desc{
+        font-size: 100px;
+        @media #{$xl}{
+            font-size: 75px;
+        }
+        @media #{$lg}{
+            font-size: 60px;
+        }
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 35px;
+        }
+    }
+    &-text{
+        font-size: 60px;
+        color: #fff;
+        @media #{$lg}{
+            font-size: 39px;
+        }
+        @media #{$md}{
+            font-size: 39px;
+        }
+        @media #{$xs}{
+            font-size: 25px;
+        }
+        & i{
+            color: var(--tp-theme-color-2);
+            font-size: 42px;
+        }
+        &-black{
+            color: #0A0E1A;
+            font-size: 40px;
+            @media #{$xs}{
+                font-size: 25px;
+            }
+        }
+    }
+    &-name{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    &-desig{
+        color: #57595c;
+        font-size: 17px;
+        margin-left: 76px;
+        & span{
+            height: 1px;
+            width: 60px;
+            background: #57595c;
+            display: inline-block;
+            @include transform(translateY(-5px));
+            margin-right: 5px;
+        }
+    }
+    &-author{
+        @media #{$xs}{
+            margin-right: 20px;
+        }
+        &-info{
+            @media #{$xs}{
+                margin-left: 0;
+            }  
+        }
+        &-name{
+            font-size: 30px;
+            color: #fff;
+            @media #{$xs}{
+                font-size: 25px;
+            }
+            &-black{
+                color: #0A0E1A;
+            }
+        }
+        &-desig{
+            font-size: 17px;
+            color: #fff;
+            &-black{
+                color: #57595C;
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 500;;
+            }
+        }
+    }
+}
+.quotes-90{
+    @include transform(scaleX(-1));
+    display: inline-block;
+    color: var(--tp-theme-color-2);
+    font-size: 42px;
+    
+}
+.tp-testimonial-long-text{
+    & i{
+        @media #{$xs}{
+            display: none;
+         }
+    }
+}
+.tp-testimonial-shape {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+    @media #{$lg}{
+        top: 0;
+    }
+}
+
+.tp-swiper-test-button {
+	position: absolute;
+	left: -100px;
+	top: 35%;
+    z-index: 9;
+    font-size: 52px;
+    &:hover{
+        color: var(--tp-theme-color);
+    }
+    @media #{$xxlm,$xl,$md,$xs}{
+        left: 0;
+        top: inherit;
+        bottom: 0;
+        position: static;
+        display: inline-block;
+        margin-top: 30px;
+    }
+    @media #{$lg}{
+        left: 0;
+    }
+    &-next{
+        left: auto;
+        right: -100px;
+        @media #{$xxlm,$xl,$md,$xs}{
+            bottom: 0;
+            right: inherit;
+            left: 70px;
+        }
+        @media #{$lg}{
+            right: 0;
+        }
+    }
+    &-prev{
+        
+    }
+}
+.tp-rot-180{
+    @include transform(rotate(180deg));
+}
+.tp-testimonial-shape-thumb{
+    &-1 {
+        top: 115px;
+        left: 0;
+        @media #{$xl}{
+            top: 50px;
+        }
+    }
+    &-2 {
+        right: 0px;
+        top: 34px;
+    }
+}
+
+.tp-testimonial-2{
+    &-shape-thumb-1 {
+        right: 19%;
+        bottom: 15%;
+    }
+    &-shape-thumb-2 {
+        right: 9%;
+        top: 19%;
+    }
+}
+
+
+.tp-swiper-test-2-button{
+    color: #fff;
+    z-index: 9;
+    font-size: 52px;
+    display: inline-block;
+    opacity: .5;
+    transition: .3s;
+    &:hover{
+        color: var(--tp-theme-color-2);
+        opacity: 1;
+    }
+}
+
+.tp-test-slider-arrow-2{
+	position: absolute;
+	bottom: 20px;
+	left: 500px;
+    @media #{$xs}{
+        margin-top: 20px;
+        position: static;
+    }
+    & span {
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        background: #DBDBDB;
+        border-radius: 100%;
+        margin: 0 10px;
+        opacity: .5;
+    }
+}
+
+.tp-testimonial-bg-color {
+	position: absolute;
+	background: #FF8653;
+	width: 408px;
+	height: 380px;
+	bottom: 0;
+	border-radius: 180px 180px 80px 80px;
+	z-index: -1;
+}
+
+.tp-testimonial-quote{
+    float: left;
+    @media #{$xs}{
+        margin-bottom: 30px;
+        float: none;
+    }
+}
+.tp-test-slider-arrow-3{
+    & .tp-swiper-test-2-button{
+        color: #57595C;
+    }
+}
+.tp-testimonial-thumb-active {
+    & .swiper-slide{
+        & img{
+            @include transform(scale(.8));
+            width: 100px;
+            transition: .3s;
+        }
+        &.swiper-slide-active{
+            & img{
+                @include transform(scale(1));
+            }
+            position: relative;
+        }
+    }
+}
+.tp-test-slider-space{
+    margin-right: -445px;
+    @media #{$lg}{
+        margin-right: -200px;
+    }
+    @media #{$md,$xs}{
+        margin-right: 0px;
+    }
+}
+.tptest {
+	background: #fff;
+	padding: 50px;
+}
+.tptest p {
+	line-height: 1.4;
+	color: #0A0E1A;
+}
+.tptest__rating i {
+	color: #FF824D;
+	font-size: 14px;
+}
+.tptest_quote {
+	background: #FFE9C9;
+	height: 70px;
+	width: 70px;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 70px;
+}
+
+.tp-review-button {
+	border: 1px solid #57595C;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	font-size: 35px;
+	border-radius: 30px;
+	line-height: 71px;
+	margin-left: 15px;
+    transition: .3s;
+    &:hover{
+        background-color: var(--tp-theme-color);
+        color: #fff;
+        border-color: var(--tp-theme-color);
+    }
+}
+.tptest__name{
+    &.tp-fs-24 {
+        @media #{$md,$xs}{
+            font-size: 18px;
+        }
+    }
+}

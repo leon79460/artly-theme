@@ -1,0 +1,257 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.14 Team
+/*----------------------------------------*/
+
+.tp-team-area {
+    @media #{$xl}{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @media #{$lg,$md,$xs}{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.tpteam{
+    &__thumb{
+        position: relative;
+        & img{
+            border-radius: 15px;
+            @include transition(.3s);
+            @media #{$xs}{
+                width: 100%;
+            }
+        }
+        &-2{
+            margin-left: 10px;
+            & > a{
+                display: block;
+                overflow: hidden;
+                border-radius: 20px;
+            }
+        }
+        &-border{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: -10px;
+            left: -10px;
+            border: 1px solid #57595C;
+            z-index: -1;
+            border-radius: 20px;
+        }
+        &-bg{
+            height: 360px;
+            width: 100%;
+            background-color: #FFE9C9;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 140px 140px 0 0;
+            &-border{
+                height: 360px;
+                border: 1px solid #57595C;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                z-index: 1;
+                border-radius: 140px 140px 0 0;
+                right: 10px;
+            }
+        }
+    }
+    &__info{
+        &.ml-80{
+            @media #{$xxlm,$xl}{
+                margin-left: 0px;
+            }
+            @media #{$lg}{
+                margin-left: 40px;
+            }
+            @media #{$md}{
+                margin-left: 30px;
+            }
+            @media #{$xs}{
+                margin-left: 20px;
+            }
+        }
+        & span{
+            color: #57595C;
+            font-size: 17px;
+            & i{
+                height: 1px;
+                width: 60px;
+                background: #D6D6D1;
+                display: inline-block;
+                @include transform(translateY(-5px));
+                margin-right: 10px;
+            }
+        }
+    }
+    &__social{
+        & a{
+            color: #0A0E1A;
+            font-size: 20px;
+            margin-right: 15px;
+            &:hover{
+                color: var(--tp-theme-color);
+            }
+        }
+        &-2{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 55%;
+            @include transform(translateY(-50%));
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 2;
+            & a{
+                height: 50px;
+                width: 50px;
+                color: #0A0E1A;
+                background: #fff;
+                display: inline-block;
+                border-radius: 50%;
+                line-height: 50px;
+                margin: 0 2px;
+                &:hover{
+                    background-color: var(--tp-theme-color);
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__title{
+        font-size: 30px;
+        margin-bottom: 5px;
+        &:hover{
+            color: var(--tp-theme-color);
+        }
+        @media #{$xl}{
+            font-size: 27px;
+        }
+        &-2{
+            @media #{$lg}{
+                font-size: 23px;
+            }
+        }
+    }
+    &__subtitle{
+       margin-bottom: 7px;
+       display: block;
+    }
+    &:hover{
+        & .tpteam__social-2{
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
+        & .tpteam__thumb-2{
+            & img{
+                filter: blur(2px);
+            }
+        }
+    }
+}
+.tp-swiper-team-button{
+    display: inline-flex;
+    font-size: 52px;
+    &:hover{
+        color: var(--tp-theme-color);
+    }
+}
+.tp-team-nav{
+    @media #{$xs}{
+        margin-bottom: 20px;
+    }
+    & span{
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+        background: #DBDBDB;
+        border-radius: 100%;
+        margin: 0 10px;
+    }
+}
+
+
+.tp-team-more-info {
+    & ul {
+        list-style: none;
+        & li {
+            margin-bottom: 10px;
+            & span {
+                color: #222;
+            }
+            & label {
+                width: 140px;
+            }
+        }
+    }
+}
+
+.tp-team-exp-info {
+    & ul {
+        margin-left: 16px;
+        & li {
+            color: #222;
+            margin-bottom: 3px;
+        }
+    }
+}
+
+.tp-team-skill-info{
+    & .progress-outer {
+        border: 0;
+        padding: 0;
+    }
+    & .tp-skill-item .progress, & .tp-skill-item .progress-stacked {
+        height: 7px;
+        background-color: #ddd;
+    }
+}
+
+
+.tp-team-call {
+    & a {
+        color: #222;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+        align-items: center;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 9px 20px;
+        display: inline-flex;
+        @media #{$xs}{
+            padding: 9px 4px;  
+        }
+        & i {
+            color: var(--tp-theme-color);
+            font-size: 14px;
+            border-left: 1px solid #ddd;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+    }
+    
+}
+
+.tp-team-details{
+    &-content{
+        @media #{$lg,$md,$xs}{
+            padding-left: 0;
+        }
+    }
+    &-thumb{
+        & img{
+            width: 100%;
+        }
+    }
+}

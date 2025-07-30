@@ -1,0 +1,19 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.15 Testimonial
+/*----------------------------------------*/
+
+.tp-video-area{
+    padding: 300px 30px;
+    background-position: center;
+    @media #{$lg}{
+        padding: 200px 30px;
+    }
+    @media #{$xl}{
+        padding: 200px 30px;
+    }
+    @media #{$xs,$md}{
+        padding: 150px 30px;
+    }
+}

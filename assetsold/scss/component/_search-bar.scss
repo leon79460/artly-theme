@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.8 Search Bar
+/*----------------------------------------*/
+
+
+.tp-header-search-bar {
+	height: 400px;
+	position: fixed;
+	top: -100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background: #fff;
+    transition: .3s;
+    &.tp-search-open{
+        top: 0;
+    }
+}
+.contact-search-form-box{
+    & form{
+        position: relative;
+        & button{
+            position: absolute;
+            right: 0;
+            top: 13px;
+            font-size: 17px;
+        }
+    }
+}
+.tp-search-close {
+	position: absolute;
+	right: 50px;
+	top: 35px;
+	font-size: 50px;
+	color: #222;
+	font-weight: 300;
+	width: 45px;
+	height: 45px;
+}
