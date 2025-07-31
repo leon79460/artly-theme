@@ -2,19 +2,19 @@
 
 get_header();
 
-$no_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center '; 
+$has_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center '; 
 
 ?>
 
-    <section class="tp-blogpost-area pt-130 pb-130">
+<main>
+    <section class="tp-blogpost-area pt-130 pb-130 new-archive">
         <div class="container">
-            <div class="row <?php echo esc_attr($no_sidebar); ?> )">
+            <div class="row <?php echo esc_attr($has_sidebar); ?> )">
                 <div class="col-xl-8 col-lg-8">
 
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part('template-parts/content', get_post_format()); ?> 
                 <?php endwhile; else : ?>
-
                     <p> <?php esc_html__( 'Sorry, no posts available in backend.' ); ?> </p>
                 <?php endif; ?>
 
@@ -35,6 +35,7 @@ $no_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center '
             </div>
         </div>
     </section>
+</main>
 
 
 <?php get_footer();

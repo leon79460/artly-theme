@@ -203,3 +203,44 @@ function footer_logo(){
   );
 }
 footer_logo(); 
+
+
+// Artly Breadcrump Section 
+function artly_breadcrumb_section() {
+  new \Kirki\Section(
+    'breadcrumb_section',
+    [
+      'title'       => esc_html__( 'Breadcrumb', 'kirki' ),
+      'description' => esc_html__( 'My Section Description.', 'kirki' ),
+      'panel'       => 'artly_theme_options',
+      'priority'    => 160,
+    ]
+  );
+
+    new \Kirki\Field\Image(
+    [
+      'settings'    => 'breadcrumb_image_bg',
+      'label'       => esc_html__( 'Breadcrumb BG Image', 'kirki' ),
+      'description' => esc_html__( 'Upload Your Breadcrumb Background Image...', 'kirki' ),
+      'section'     => 'breadcrumb_section',
+      'default'     => get_template_directory_uri().'/assets/img/breadcrumb/breadcrumb-pattern.png',
+    ]
+  );
+
+    new \Kirki\Field\Checkbox_Switch(
+    [
+      'settings'    => 'breadcrumb_shape_switch',
+      'label'       => esc_html__( 'Breadcrumb Shape Switch', 'kirki' ),
+      'description' => esc_html__( 'Simple switch control', 'kirki' ),
+      'section'     => 'breadcrumb_section',
+      'default'     => 'on',
+      'choices'     => [
+        'on'  => esc_html__( 'Enable', 'kirki' ),
+        'off' => esc_html__( 'Disable', 'kirki' ),
+      ],
+    ]
+  );
+  
+  
+}
+artly_breadcrumb_section();

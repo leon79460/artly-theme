@@ -181,6 +181,8 @@ add_filter( 'get_search_form', 'artly_search_form' );
 include_once ('inc/template-function.php');
 include_once ('inc/nav-walker.php');
 include_once ('inc/sidebar-recent-post.php');
+include_once ('inc/breadcrumb.php');
+
 if ( class_exists( 'Kirki' ) ) {
 include_once ('inc/artly-kirki.php');
 }

@@ -14,6 +14,10 @@ $has_sidebar = is_active_sidebar('blog-sidebar') ? '' : 'justify-content-center 
 
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part('template-parts/content', get_post_format()); ?> 
+
+                    <?php if ( comments_open() || get_comments_number() ) : comments_template(); 
+                    endif; ?> 
+
                 <?php endwhile; else : ?>
                     <p> <?php esc_html_e( 'Sorry, no posts available in backend.' ); ?> </p>
                 <?php endif; ?>
